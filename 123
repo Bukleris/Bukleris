@@ -1,0 +1,449 @@
+Moderatortype	Group	Priority	Tekstplassering[+]	Leadtext	CRLF	Variablename	Control type	Posisjon	Posisjon2	Condition	True value	False value	Nytt Varenummer	Orderline field	Tekstfelt	Tekstfelt2	Arkfane	Visning Test
+Condition	5 000	5 000	0	Say this is tabletop		@TableTop	0	0	0	1=1	1							
+Condition	11	11	0	Width		@WIDTH	0	0	0	@WT_SHAPESWT6='HJOH' or @WT_SHAPESWT6='HJOV'	WT_WIDTH5CORN1							
+Condition	40	40	0	Core number		@CORENUMBER	0	107	106	1=1	55							
+Condition	80	80	0	Find end number corner right		@EXITA	0	0	0	@WT_LENGTH='1600' and @WT_WIDTH='1200' and @WT_SHAPESWT6='HJOH'	241							
+Condition	80	80	0	Find end number  corner right		@EXITA	0	0	0	@WT_LENGTH='1800' and @WT_WIDTH='1200' and @WT_SHAPESWT6='HJOH'	242							
+Condition	80	80	0	Find end number corner left		@EXITA	0	0	0	@WT_LENGTH='2000' and @WT_WIDTH='1200' and @WT_SHAPESWT6='HJOV'	245							
+Condition	80	80	0	Find end number corner left		@EXITA	0	0	0	@WT_LENGTH='1600' and @WT_WIDTH='1200' and @WT_SHAPESWT6='HJOV'	246							
+Condition	80	80	0	Find end number		@EXITA	0	0	0	@WT_LENGTH='1800' and @WT_WIDTH='1200' and @WT_SHAPESWT6='HJOV'	247							
+Condition	9	9	0	Lenght		@LENGTH	0	0	0	@WT_SHAPESWT6='HJOH' or @WT_SHAPESWT6='HJOV'	WT_LENGTHCORN							
+Condition	290	290	0	Find end number		@SWT6LEGSTYPE	0	0	0	1=1	WT_LEGSTYPESWT61							
+Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSTYPE='AS'	WT_LEGSCOLORA							
+Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSTYPE='FX' or @WT_LEGSTYPE='EX'	WT_LEGSCOLOR							
+Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSTYPE='MA' and @WT_LEGSSHAPE=1	WT_LEGSCOLORA							
+Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSSHAPE=2 and (@WT_LEGSTYPE='MA'  or @WT_LEGSTYPE='ZO')	WT_LEGSCOLOR							
+Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSTYPE='WO'	WT_LEGSWITHOUT							
+Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSTYPE='ID' or @WT_LEGSTYPE='ED' and @WT_LENGTH>1199	WT_LEGSCOLOR							
+Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSTYPE='ID' or @WT_LEGSTYPE='ED' and @WT_LENGTH<1200	WT_LEGSCOLORA							
+Condition	325	325	0	 feet type		@WT_LEGSFEET_M	0	0	0	(@WT_WIDTH>799 and @WT_WIDTH<1000) and @WT_LEGSTYPE<>'ED' and @WT_LEGSTYPE<>'ID' and @WT_LEGSTYPE<>'WO'	WT_LEGSFEET700							
+Condition	325	325	0	 feet type		@WT_LEGSFEET_M	0	0	0	(@WT_WIDTH>799 and @WT_WIDTH<1000) and (@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID')	WT_LEGSFEETROL700							
+Condition	325	325	0	 feet type		@WT_LEGSFEET_M	0	0	0	@WT_LEGSTYPE='WO' OR @WT_LEGSTYPE='ZO'	WT_LEGSWITHOUT							
+Condition	325	325	0	 feet type		@WT_LEGSFEET_M	0	0	0	@WT_WIDTH < 800 and @WT_LEGSTYPE<>'ED' and @WT_LEGSTYPE<>'ID' and @WT_LEGSTYPE<>'WO'	WT_LEGSFEET500							
+Condition	325	325	0	 feet type		@WT_LEGSFEET_M	0	0	0	@WT_WIDTH > 999 and @WT_LEGSTYPE<>'ED' and @WT_LEGSTYPE<>'ID' and @WT_LEGSTYPE<>'WO'	WT_LEGSFEET900							
+Condition	325	325	0	 feet type		@WT_LEGSFEET_M	0	0	0	@WT_WIDTH < 800 and (@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID')	WT_LEGSFEETROL500							
+Condition	325	325	0	 feet type		@WT_LEGSFEET_M	0	0	0	(@WT_WIDTH>999) and (@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID')	WT_LEGSFEETROL900							
+Condition	345	345	0	 leg system beam type		@WT_LEGSBEAM_M	0	0	0	@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID'	WT_LEGSBEAMROL							
+Condition	345	345	0	 leg system beam type		@WT_LEGSBEAM_M	0	0	0	@WT_LENGTH>1399 and  (@WT_LEGSTYPE='MA' OR @WT_LEGSTYPE='EX' OR @WT_LEGSTYPE='AS' OR @WT_LEGSTYPE='FX')	WT_LEGSBEAM							
+Condition	345	345	0	 leg system beam type		@WT_LEGSBEAM_M	0	0	0	@WT_LENGTH<1400 and (@WT_LEGSTYPE='MA' OR @WT_LEGSTYPE='EX' OR @WT_LEGSTYPE='AS' OR @WT_LEGSTYPE='FX' )	WT_LEGSBEAMFIX							
+Condition	345	345	0	 leg system beam type		@WT_LEGSBEAM_M	0	0	0	@WT_LEGSTYPE='WO' OR @WT_LEGSTYPE='ZO'	WT_LEGSWITHOUT							
+Condition	355	355	0	 leg system sound level		@WT_LEGSSILENTROL_M	0	0	0	@WT_LEGSTYPE='EX'	WT_LEGSSILENTALL							
+Condition	355	355	0	 leg system sound level		@WT_LEGSSILENTROL_M	0	0	0	@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID' and @WT_LEGSSHAPE='1' and @WT_LENGTH>1199	WT_LEGSSILENTROLS							
+Condition	355	355	0	 leg system sound level		@WT_LEGSSILENTROL_M	0	0	0	@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID' and @WT_LEGSSHAPE='2'	WT_LEGSSILENTROLS							
+Condition	355	355	0	 leg system sound level		@WT_LEGSSILENTROL_M	0	0	0	@WT_LEGSTYPE='AS'	WT_LEGSSILENTASTR							
+Condition	355	355	0	 leg system sound level		@WT_LEGSSILENTROL_M	0	0	0	@WT_LEGSTYPE='WO' or @WT_LEGSTYPE='FX' or @WT_LEGSTYPE='MA' OR @WT_LEGSTYPE='ZO'	WT_LEGSWITHOUT							
+Condition	355	355	0	 leg system sound level		@WT_LEGSSILENTROL_M	0	0	0	@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID' and @WT_LEGSSHAPE='1' and @WT_LENGTH<1200	WT_LEGSSILENTROLS							
+Condition	365	365	0	 leg system sound level		@WT_LEGSHEIGTH_M	0	0	0	@WT_LEGSTYPE='FX'	WT_LEGSHFIX							
+Condition	365	365	0	 leg system sound level		@WT_LEGSHEIGTH_M	0	0	0	@WT_LEGSTYPE='EX'	WT_LEGSHEXPL							
+Condition	365	365	0	 leg system sound level		@WT_LEGSHEIGTH_M	0	0	0	@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID'	WT_LEGSHROLAST							
+Condition	365	365	0	 leg system sound level		@WT_LEGSHEIGTH_M	0	0	0	@WT_LEGSTYPE='MA'	WT_LEGSHMANUAL							
+Condition	365	365	0	 leg system sound level		@WT_LEGSHEIGTH_M	0	0	0	@WT_LEGSTYPE='WO'	WT_LEGSWITHOUT							
+Condition	399	399	0	Choose Cable tray length finder		@ST_MMCABLECANAL	0	0	0	@WT_LENGTH<901	ST_CABLECANAL800							
+Condition	399	399	0	Choose Cable tray length finder		@ST_MMCABLECANAL	0	0	0	@WT_LENGTH>900 and @WT_LENGTH<1000	ST_CABLECANAL900							
+Condition	399	399	0	Choose Cable tray length finder		@ST_MMCABLECANAL	0	0	0	@WT_LENGTH>999 and @WT_LENGTH<1200	ST_CABLECANAL1000							
+Condition	399	399	0	Choose Cable tray length finder		@ST_MMCABLECANAL	0	0	0	@WT_LENGTH>1199 and @WT_LENGTH<1400	ST_CABLECANAL1200							
+Condition	399	399	0	Choose Cable tray length finder		@ST_MMCABLECANAL	0	0	0	@WT_LENGTH>1399 and @WT_LENGTH<1600	ST_CABLECANAL1400							
+Condition	399	399	0	Choose Cable tray length finder		@ST_MMCABLECANAL	0	0	0	@WT_LENGTH>1599 and @WT_LENGTH<1800	ST_CABLECANAL1600							
+Condition	399	399	0	Choose Cable tray length finder		@ST_MMCABLECANAL	0	0	0	@WT_LENGTH>1799 and @WT_LENGTH<2000	ST_CABLECANAL1800							
+Condition	399	399	0	Choose Cable tray length finder		@ST_MMCABLECANAL	0	0	0	@WT_LENGTH>1999 and @WT_LENGTH<2200	ST_CABLECANAL2000							
+Condition	399	399	0	Choose Cable tray length finder		@ST_MMCABLECANAL	0	0	0	@WT_LENGTH>2199	ST_CABLECANAL2200							
+Condition	401	401	0	Choose cable tray colour		@ST_CABLETRAYCOLOR_M	0	0	0	@ST_CABLECANAL=2 and @WT_LEGSTYPE<>'WO' and @WT_LENGTH<900	ST_CABLETRAYCOLOR1							
+Condition	401	401	0	Choose cable tray colour		@ST_CABLETRAYCOLOR_M	0	0	0	@ST_CABLECANAL='1' and @WT_LEGSTYPE<>'WO'	ST_CABLETRAYCOLOR2							
+Condition	401	401	0	Choose cable tray colour		@ST_CABLETRAYCOLOR_M	0	0	0	@ST_CABLECANAL='2' and @WT_LEGSTYPE='WO'	ST_CABLETRAYCOLOR1X							
+Condition	401	401	0	Choose cable tray colour		@ST_CABLETRAYCOLOR_M	0	0	0	@ST_CABLECANAL='1' and @WT_LEGSTYPE='WO'	ST_CABLETRAYCOLOR2X							
+Condition	401	401	0	Choose cable tray colour		@ST_CABLETRAYCOLOR_M	0	0	0	@ST_CABLECANAL='X'	ST_CABLETRAYCOLORXX							
+Condition	401	401	0	Choose cable tray colour		@ST_CABLETRAYCOLOR_M	0	0	0	@ST_CABLECANAL=2 and @WT_LEGSTYPE<>'WO' and @WT_LENGTH>899	ST_CABLETRAYCOLOR1L							
+Condition	102	102	0	Choose Wireless Charger position finder		@WT_WIRELESS_C	0	0	0	@WT_WIRELESS='7' or @WT_WIRELESS='8' or @WT_WIRELESS='9'	C							
+Condition	102	102	0	Choose Wireless Charger position finder		@WT_WIRELESS_C	0	0	0	@WT_WIRELESS='4' or @WT_WIRELESS='5' or @WT_WIRELESS='6'	L							
+Condition	102	102	0	Choose Wireless Charger position finder		@WT_WIRELESS_C	0	0	0	@WT_WIRELESS='1' or @WT_WIRELESS='2' or @WT_WIRELESS='3'	R							
+Condition	102	102	0	Choose Wireless Charger position finder		@WT_WIRELESS_C	0	0	0	@WT_WIRELESS='X'	X							
+Condition	105	105	0	cable hole position		@ST_CUTOUT_TYPE	0	0	0	@WT_WIRELESS='7' or @WT_WIRELESS='8' or @WT_WIRELESS='9'	ST_SLISSCABLE1							
+Condition	105	105	0	cable hole position		@ST_CUTOUT_TYPE	0	0	0	@WT_WIRELESS<>'7' and @WT_WIRELESS<>'8' and @WT_WIRELESS<>'9'	ST_SLISSCABLE							
+Condition	152	152	0	 cable hole accessory Left		@ST_CABLEACCESSORY_L	0	0	0	@ST_CUTOUTL=1	WT_PWR30							
+Condition	152	152	0	 cable hole accessory Left		@ST_CABLEACCESSORY_L	0	0	0	@ST_CUTOUTL=5	WT_PWR50							
+Condition	152	152	0	 cable hole accessory Left		@ST_CABLEACCESSORY_L	0	0	0	@ST_CUTOUTL=6	WT_PWR60							
+Condition	152	152	0	 cable hole accessory Left		@ST_CABLEACCESSORY_L	0	0	0	@ST_CUTOUTL=8	WT_PWR80							
+Condition	152	152	0	 cable hole accessory Left		@ST_CABLEACCESSORY_L	0	0	0	@ST_CUTOUTL=4	WT_PWRXX							
+Condition	152	152	0	 cable hole accessory Left		@ST_CABLEACCESSORY_L	0	0	0	@ST_CUTOUTL=9	WT_PWRWITHOUT							
+Condition	154	154	0	Cutout accessory/color		@ST_CUTOUTCOLOR_ML	0	0	0	@ST_CUTOUTL=8 or @ST_CUTOUTL=6 or @ST_CUTOUTL=5 or @ST_CUTOUTL=1	WT_WITHOUTCUTOUT							
+Condition	154	154	0	Cutout accessory/color		@ST_CUTOUTCOLOR_ML	0	0	0	@ST_CUTOUTL=9	WT_WITHOUTCUTOUT							
+Condition	154	154	0	Cutout accessory/color		@ST_CUTOUTCOLOR_ML	0	0	0	@ST_CUTOUTL=4	WT_COLORCUTOUT							
+Condition	161	161	0	 cable hole accessory Center		@ST_CABLEACCESSORY_C	0	0	0	@ST_CUTOUTC=1	WT_PWR30_C							
+Condition	161	161	0	 cable hole accessory Center		@ST_CABLEACCESSORY_C	0	0	0	@ST_CUTOUTC=5	WT_PWR50_C							
+Condition	161	161	0	 cable hole accessory Center		@ST_CABLEACCESSORY_C	0	0	0	@ST_CUTOUTC=6	WT_PWR60_C							
+Condition	161	161	0	 cable hole accessory Center		@ST_CABLEACCESSORY_C	0	0	0	@ST_CUTOUTC=8	WT_PWR80_C							
+Condition	161	161	0	 cable hole accessory Center		@ST_CABLEACCESSORY_C	0	0	0	@ST_CUTOUTC=4	WT_PWRXX_C							
+Condition	161	161	0	 cable hole accessory Center		@ST_CABLEACCESSORY_C	0	0	0	@ST_CUTOUTC=9	WT_PWRWITHOUT							
+Condition	164	164	0	Cutout accessory/color		@ST_CUTOUTCOLOR_MC	0	0	0	@ST_CUTOUTC=8 or @ST_CUTOUTC=6 or @ST_CUTOUTC=5 or @ST_CUTOUTC=1	WT_WITHOUTCUTOUT							
+Condition	164	164	0	Cutout accessory/color		@ST_CUTOUTCOLOR_MC	0	0	0	@ST_CUTOUTC=4	WT_COLORCUTOUT							
+Condition	164	164	0	Cutout accessory/color		@ST_CUTOUTCOLOR_MC	0	0	0	@ST_CUTOUTC=9	WT_WITHOUTCUTOUT							
+Condition	169	169	0	 cable hole accessory Center		@ST_CABLEACCESSORY_R	0	0	0	@ST_CUTOUTR=1	WT_PWR30_R							
+Condition	169	169	0	 cable hole accessory Center		@ST_CABLEACCESSORY_R	0	0	0	@ST_CUTOUTR=5	WT_PWR50_R							
+Condition	169	169	0	 cable hole accessory Center		@ST_CABLEACCESSORY_R	0	0	0	@ST_CUTOUTR=6	WT_PWR60_R							
+Condition	169	169	0	 cable hole accessory Center		@ST_CABLEACCESSORY_R	0	0	0	@ST_CUTOUTR=8	WT_PWR80_R							
+Condition	169	169	0	 cable hole accessory Center		@ST_CABLEACCESSORY_R	0	0	0	@ST_CUTOUTR=4	WT_PWRXX_R							
+Condition	169	169	0	 cable hole accessory Center		@ST_CABLEACCESSORY_R	0	0	0	@ST_CUTOUTR=9	WT_PWRWITHOUT							
+Condition	171	171	0	Cutout accessory/color		@ST_CUTOUTCOLOR_MR	0	0	0	@ST_CUTOUTR=8 or @ST_CUTOUTR=6 or @ST_CUTOUTR=5 or @ST_CUTOUTR=1	WT_WITHOUTCUTOUT							
+Condition	171	171	0	Cutout accessory/color		@ST_CUTOUTCOLOR_MR	0	0	0	@ST_CUTOUTR=9	WT_WITHOUTCUTOUT							
+Condition	171	171	0	Cutout accessory/color		@ST_CUTOUTCOLOR_MR	0	0	0	@ST_CUTOUTR=4	WT_COLORCUTOUT							
+Condition	131	131	0	Control cutout		@ST_CUTOUT_C	0	0	0	(@ST_CUTOUTTYPE='C1' or @ST_CUTOUTTYPE='C2' or @ST_CUTOUTTYPE='C3' or @ST_CUTOUTTYPE='XX')	ST_CUTOUTCSWT5							
+Condition	131	131	0	Control cutout		@ST_CUTOUT_C	0	0	0	(@ST_CUTOUTTYPE='C4' or @ST_CUTOUTTYPE='C5' or @ST_CUTOUTTYPE='C6' or @ST_CUTOUTTYPE='C7' or @ST_CUTOUTTYPE='XX')	ST_CUTOUTCSWT5							
+Condition	429	429	0	 screen holders		@WT_VESTABracketsXX	0	0	0	@WT_VestaTextile='XX'	WT_VESTABracketsx							
+Condition	429	429	0	 screen holders		@WT_VESTABracketsXX	0	0	0	@WT_VestaTextile<>'XX'	WT_VESTABrackets							
+Condition	432	432	0	CLAMP Vesta screen holders colour		@WT_VESTABRACOLOR_M	0	0	0	(@WT_VESTABrackets='A1' and @WT_VestaTextile<>'XX' and @WT_LEGSTYPE='WO')	WT_VESTABRACOLOR2X							
+Condition	432	432	0	CLAMP Vesta screen holders colour		@WT_VESTABRACOLOR_M	0	0	0	@WT_VESTABrackets='A2' and @WT_VestaTextile<>'XX' and @WT_LEGSTYPE='WO'	WT_VESTABRACOLOR1X							
+Condition	432	432	0	CLAMP Vesta screen holders colour		@WT_VESTABRACOLOR_M	0	0	0	@WT_VESTABrackets='A1' and @WT_VestaTextile<>'XX' and @WT_LEGSTYPE<>'WO'	WT_VESTABRACOLOR2							
+Condition	432	432	0	CLAMP Vesta screen holders colour		@WT_VESTABRACOLOR_M	0	0	0	@WT_VESTABrackets='A2' and @WT_VestaTextile<>'XX' and @WT_LEGSTYPE<>'WO'	WT_VESTABRACOLOR1							
+Condition	432	432	0	CLAMP Vesta screen holders colour		@WT_VESTABRACOLOR_M	0	0	0	@WT_VESTABrackets<>'' and @WT_VestaTextile='XX'	WT_VESTABRACOLORXX							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>799 and @RealExitLenght_R<1000) and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX')	WT_VESTAVELITOF_AL08							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>999 and @RealExitLenght_R<1200) and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX')	WT_VESTAVELITOF_AL10							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1199 and @RealExitLenght_R<1400) and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX')	WT_VESTAVELITOF_AL12							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1399 and @RealExitLenght_R<1600) and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX')	WT_VESTAVELITOF_AL14							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1599 and @RealExitLenght_R<1800) and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX')	WT_VESTAVELITOF_AL16							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1799 and @RealExitLenght_R<2000) and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX')	WT_VESTAVELITOF_AL18							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	@RealExitLenght_R>1999 and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX')	WT_VESTAVELITOF_AL20							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>799 and @RealExitLenght_R<1000) and @WT_VestaTextile='A2' or @WT_VestaTextile='XX'	WT_VestaEVENTF_ALL08							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>999 and @RealExitLenght_R<1200) and @WT_VestaTextile='A2' or @WT_VestaTextile='XX'	WT_VestaEVENTF_ALL10							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1199 and @RealExitLenght_R<1400) and @WT_VestaTextile='A2' or @WT_VestaTextile='XX'	WT_VestaEVENTF_ALL12							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1399 and @RealExitLenght_R<1600) and @WT_VestaTextile='A2' or @WT_VestaTextile='XX'	WT_VestaEVENTF_ALL14							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1599 and @RealExitLenght_R<1800) and @WT_VestaTextile='A2' or @WT_VestaTextile='XX'	WT_VestaEVENTF_ALL16							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1799 and @RealExitLenght_R<2000) and @WT_VestaTextile='A2' or @WT_VestaTextile='XX'	WT_VestaEVENTF_ALL18							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	@RealExitLenght_R>1999 and @WT_VestaTextile='A2' or @WT_VestaTextile='XX'	WT_VestaEVENTF_ALL20							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>799 and @RealExitLenght_R<1000) and @WT_VestaTextile='A3' or @WT_VestaTextile='XX'	WT_VestaCARAF_ALL08							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>999 and @RealExitLenght_R<1200) and @WT_VestaTextile='A3' or @WT_VestaTextile='XX'	WT_VestaCARAF_ALL10							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1199 and @RealExitLenght_R<1400) and @WT_VestaTextile='A3' or @WT_VestaTextile='XX'	WT_VestaCARAF_ALL12							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1399 and @RealExitLenght_R<1600) and @WT_VestaTextile='A3' or @WT_VestaTextile='XX'	WT_VestaCARAF_ALL14							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1599 and @RealExitLenght_R<1800) and @WT_VestaTextile='A3' or @WT_VestaTextile='XX'	WT_VestaCARAF_ALL16							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1799 and @RealExitLenght_R<2000) and @WT_VestaTextile='A3' or @WT_VestaTextile='XX'	WT_VestaCARAF_ALL18							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	@RealExitLenght_R>1999 and @WT_VestaTextile='A3' or @WT_VestaTextile='XX'	WT_VestaCARAF_ALL20							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R='0800') and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))	WT_VESTAVELITOL08							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>999 and @REALEXITWIDTH_R<1200) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))	WT_VESTAVELITOL10							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>799 and @REALEXITWIDTH_R<1000) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))	WT_VESTAEVENTLL08							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>999 and @REALEXITWIDTH_R<1200) and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))	WT_VESTAEVENTLL10							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>799 and @REALEXITWIDTH_R<1000) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))	WT_VESTACARALL08							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>999 and @REALEXITWIDTH_R<1200) and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))	WT_VESTACARALL10							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	@WT_WIDTH<>'0800'	WT_VESTAVELITOoff							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	(@WT_WIDTH='0800') and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))	WT_VESTAVELITOR08							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	(@WT_WIDTH>999 and @WT_WIDTH<1200) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))	WT_VESTAVELITOR10							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	@WT_WIDTH>1199 and (@WT_VESTAVELITOF<>'XX' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))	WT_VESTAVELITOR12							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	(@WT_WIDTH>799 and @WT_WIDTH<1000) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))	WT_VESTAEVENTRR08							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	(@WT_WIDTH>999 and @WT_WIDTH<1200) and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))	WT_VESTAEVENTRR10							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	@WT_WIDTH>1199 and (@WT_VESTAVELITOF<>'XX' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))	WT_VESTAEVENTRR12							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	(@WT_WIDTH>799 and @WT_WIDTH<1000) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))	WT_VESTACARARR08							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	(@WT_WIDTH>999 and @WT_WIDTH<1200) and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))	WT_VESTACARARR10							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	@WT_WIDTH>1199 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))	WT_VESTACARARR12							
+Condition	5 500	5 500	0	Panel(tabletop) vriant		@SWT6_Core_Table	0	0	0	1=1	@CORENUMBER@ST_SWT5SURFACE@TELLUSENDNUM							
+Condition	500	500	0	Cable hole	1	@SWT6LC	0	0	0	@ST_CUTOUTTYPE='C2' or @ST_CUTOUTTYPE='C4' or @ST_CUTOUTTYPE='C5' or @ST_CUTOUTTYPE='C7' or @WT_WIRELESS='1' or @WT_WIRELESS='2' or @WT_WIRELESS='3'	LC							
+Condition	501	501	0	Cable hole	1	@SWT6LL	0	0	0	@ST_CUTOUTTYPE='C1' or @ST_CUTOUTTYPE='C4' or @ST_CUTOUTTYPE='C6' or @ST_CUTOUTTYPE='C7'	LL							
+Condition	502	502	0	Cable hole	1	@SWT6LR	0	0	0	@ST_CUTOUTTYPE='C3' or @ST_CUTOUTTYPE='C5' or @ST_CUTOUTTYPE='C6' or @ST_CUTOUTTYPE='C7'	LR							
+Condition	503	503	0	Cable hole	1	@SWT6FL	0	0	0	@WT_WIRELESS='4' or @WT_WIRELESS='5' or @WT_WIRELESS='6'	FL							
+Condition	504	504	0	Cable hole	1	@SWT6FR	0	0	0	@WT_WIRELESS='1' or @WT_WIRELESS='2' or @WT_WIRELESS='3'	FR							
+Condition	505	505	0	Cable hole	1	@SWT6SIZELL	0	0	0	@ST_CUTOUTL=1	30;							
+Condition	505	505	0	Cable hole	1	@SWT6SIZELL	0	0	0	@ST_CUTOUTL=5	50;							
+Condition	505	505	0	Cable hole	1	@SWT6SIZELL	0	0	0	@ST_CUTOUTL=6	60;							
+Condition	505	505	0	Cable hole	1	@SWT6SIZELL	0	0	0	@ST_CUTOUTL=8	80;							
+Condition	505	505	0	Cable hole	1	@SWT6SIZELL	0	0	0	@ST_CUTOUTL=4	Metal;							
+Condition	505	505	0	Cable hole	1	@SWT6SIZELL	0	0	0	@ST_CUTOUTL=3	Wood;							
+Condition	505	505	0	Cable hole	1	@SWT6SIZELL	0	0	0	@ST_CUTOUTL=2	Wood;							
+Condition	508	508	0	Cable hole	1	@SWT6SIZELC	0	0	0	@ST_CUTOUTC=1	30							
+Condition	508	508	0	Cable hole	1	@SWT6SIZELC	0	0	0	@ST_CUTOUTC=5	50;							
+Condition	508	508	0	Cable hole	1	@SWT6SIZELC	0	0	0	@ST_CUTOUTC=6 or @WT_WIRELESS_C='C'	60;							
+Condition	508	508	0	Cable hole	1	@SWT6SIZELC	0	0	0	@ST_CUTOUTC=8	80;							
+Condition	508	508	0	Cable hole	1	@SWT6SIZELC	0	0	0	@ST_CUTOUTC=3	Wood;							
+Condition	508	508	0	Cable hole	1	@SWT6SIZELC	0	0	0	@ST_CUTOUTC=2	Wood;							
+Condition	510	510	0	Cable hole	1	@SWT6SIZELR	0	0	0	@ST_CUTOUTR=1	30;							
+Condition	510	510	0	Cable hole	1	@SWT6SIZELR	0	0	0	@ST_CUTOUTR=5	50;							
+Condition	510	510	0	Cable hole	1	@SWT6SIZELR	0	0	0	@ST_CUTOUTR=6	60;							
+Condition	510	510	0	Cable hole	1	@SWT6SIZELR	0	0	0	@ST_CUTOUTR=8	80;							
+Condition	510	510	0	Cable hole	1	@SWT6SIZELR	0	0	0	@ST_CUTOUTR=3	Wood;							
+Condition	510	510	0	Cable hole	1	@SWT6SIZELR	0	0	0	@ST_CUTOUTR=2	Wood;							
+Condition	515	515	0	Cable hole	1	@SWT6SIZEFR	0	0	0	@WT_WIRELESS_C='R'	60;							
+Condition	516	516	0	Cable hole	1	@SWT6SIZEFL	0	0	0	@WT_WIRELESS_C='L'	60;							
+Condition	500	500	0	Cable hole	1	@SWT6LC	0	0	0	@ST_CUTOUTTYPE<>'C2' and @ST_CUTOUTTYPE<>'C4' and @ST_CUTOUTTYPE<>'C5' and @ST_CUTOUTTYPE<>'C7' and @WT_WIRELESS<>'1' and @WT_WIRELESS<>'2' and @WT_WIRELESS<>'3'								
+Condition	501	501	0	Cable hole	1	@SWT6LL	0	0	0	@ST_CUTOUTTYPE<>'C1' and @ST_CUTOUTTYPE<>'C4' and @ST_CUTOUTTYPE<>'C6' and @ST_CUTOUTTYPE<>'C7'								
+Condition	502	502	0	Cable hole	1	@SWT6LR	0	0	0	@ST_CUTOUTTYPE<>'C3' and @ST_CUTOUTTYPE<>'C5' and @ST_CUTOUTTYPE<>'C6' and @ST_CUTOUTTYPE<>'C7'								
+Condition	503	503	0	Cable hole	1	@SWT6FL	0	0	0	@WT_WIRELESS<>'4' and @WT_WIRELESS<>'5' and @WT_WIRELESS<>'6'								
+Condition	504	504	0	Cable hole	1	@SWT6FR	0	0	0	@WT_WIRELESS<>'1' and @WT_WIRELESS<>'2' and @WT_WIRELESS<>'3'								
+Condition	505	505	0	Cable hole	1	@SWT6SIZELL	0	0	0	@ST_CUTOUTL=9								
+Condition	515	515	0	Cable hole	1	@SWT6SIZEFR	0	0	0	@WT_WIRELESS_C='X'								
+Condition	516	516	0	Cable hole	1	@SWT6SIZEFL	0	0	0	@WT_WIRELESS_C='X'								
+Condition	508	508	0	Cable hole	1	@SWT6SIZELC	0	0	0	@ST_CUTOUTC=4	Metal;							
+Condition	508	508	0	Cable hole	1	@SWT6SIZELC	0	0	0	@ST_CUTOUTC=9 and @WT_WIRELESS_C='X'								
+Condition	510	510	0	Cable hole	1	@SWT6SIZELR	0	0	0	@ST_CUTOUTR=4	Metal;							
+Condition	510	510	0	Cable hole	1	@SWT6SIZELR	0	0	0	@ST_CUTOUTR=9								
+Condition	600	600	0	Vesta side length		@realvestasidelength	0	0	0	@WT_WIDTH='0800' or @WT_WIDTH='0900'  or (@WT_LENGTH='1050' and @WT_SHAPESWT6='STAR')  or (@WT_LENGTH='1500' and @WT_SHAPESWT6='STAR')	8							
+Condition	600	600	0	Vesta side length		@realvestasidelength	0	0	0	@WT_WIDTH='1000' or @WT_WIDTH='1100'	10							
+Condition	600	600	0	Vesta side length		@realvestasidelength	0	0	0	@WT_WIDTH='1200'	12							
+Condition	650	650	0	Vesta front length		@realvestalength	0	0	0	@WT_LENGTH='0800' or (@WT_LENGTH='1050' and @WT_SHAPESWT6='STAR')  or (@WT_LENGTH='1500' and @WT_SHAPESWT6='STAR')	8							
+Condition	650	650	0	Vesta front length		@realvestalength	0	0	0	@WT_LENGTH='1000'	10							
+Condition	650	650	0	Vesta front length		@realvestalength	0	0	0	@WT_LENGTH='1200'	12							
+Condition	650	650	0	Vesta front length		@realvestalength	0	0	0	@WT_LENGTH='1400'	14							
+Condition	650	650	0	Vesta front length		@realvestalength	0	0	0	@WT_LENGTH='1600'	16							
+Condition	650	650	0	Vesta front length		@realvestalength	0	0	0	@WT_LENGTH='1800'	18							
+Condition	650	650	0	Vesta front length		@realvestalength	0	0	0	@WT_LENGTH='2000'	200							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>799) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX')) and @WT_SHAPESWT6='STAR'	WT_VESTAVELITOL08							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>799 ) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX')) and @WT_SHAPESWT6='STAR'	WT_VESTAEVENTLL08							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>799) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX')) and @WT_SHAPESWT6='STAR'	WT_VESTACARALL08							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	(@WT_WIDTH>799 ) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))and @WT_SHAPESWT6='STAR'	WT_VESTAVELITOR08							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	(@WT_WIDTH>799) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))and @WT_SHAPESWT6='STAR'	WT_VESTAEVENTRR08							
+Condition	455	455	0	Right Vesta screen		@WT_VESTAVELITOR_M	0	0	0	(@WT_WIDTH>799 ) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))and @WT_SHAPESWT6='STAR'	WT_VESTACARARR08							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>799 and @WT_SHAPESWT6='STAR') and @WT_VestaTextile='A2' or @WT_VestaTextile='XX'	WT_VestaEVENTF_ALL08							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>799 and @WT_SHAPESWT6='STAR') and @WT_VestaTextile='A3' or @WT_VestaTextile='XX'	WT_VestaCARAF_ALL08							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>799 and @WT_SHAPESWT6='STAR') and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX')	WT_VESTAVELITOF_AL08							
+Condition	365	365	0	 leg system sound level		@WT_LEGSHEIGTH_M	0	0	0	@WT_LEGSTYPE='AS'	WT_LEGSHEAST							
+Condition	331	331	0	 feet type		@WT_LEGSFEET_ML	0	0	0	(@WT_SHAPESWT6='HJOV')	WT_LEGSFEET900							
+Condition	331	331	0	 feet type		@WT_LEGSFEET_ML	0	0	0	(@WT_SHAPESWT6='HJOH')	WT_LEGSFEET700SWT5							
+Condition	336	336	0	 feet type		@WT_LEGSFEET_MR	0	0	0	(@WT_SHAPESWT6='HJOV')	WT_LEGSFEET700SWT5							
+Condition	336	336	0	 feet type		@WT_LEGSFEET_MR	0	0	0	(@WT_SHAPESWT6='HJOH')	WT_LEGSFEET900							
+Condition	700	700	0	RolErgo check		@ROLLERGOCHECK	0	0	0	(@WT_SHAPESWT6<>'HJOH' and  @WT_SHAPESWT6<>'HJOV' ) and @footlength>999 and (@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID') and @WT_LEGSSHAPE<>3	@WT_LEGSTYPE@footlength.@legsrealcolor.@							
+Condition	700	700	0	RolErgo check		@ROLLERGOCHECK	0	0	0	(@WT_SHAPESWT6<>'HJOH' and  @WT_SHAPESWT6<>'HJOV' ) and @WT_LENGTH<1200 and @footlength<999 and (@WT_LEGSTYPE='ED') and @WT_LEGSSHAPE<>3	@WT_LEGSTYPE@footlengthSTB@legsrealcolor							
+Condition	700	700	0	RolErgo check		@ROLLERGOCHECK	0	0	0	(@WT_SHAPESWT6<>'HJOH' and  @WT_SHAPESWT6<>'HJOV' ) and @footlength<999 and (@WT_LEGSTYPE='ID') and @WT_LEGSSHAPE<>3	@WT_LEGSTYPE@footlength.@legsrealcolor.@							
+Condition	700	700	0	RolErgo check		@ROLLERGOCHECK	0	0	0	(@WT_SHAPESWT6<>'HJOH' and  @WT_SHAPESWT6<>'HJOV' ) and @footlength>999 and (@WT_LEGSTYPE='ED') and @WT_LEGSSHAPE=3	EDU@footlength.@legsrealcolor.@reallegsh							
+Condition	700	700	0	RolErgo check		@ROLLERGOCHECK	0	0	0	(@WT_SHAPESWT5<>'HJOH' and  @WT_SHAPESWT5<>'HJOV' ) and @footlength<999 and (@WT_LEGSTYPE='ED') and @WT_LEGSSHAPE=3	EDU@footlength.@legsrealcolor.@reallegsh							
+Condition	700	700	0	RolErgo check		@ROLLERGOCHECK	0	0	0	(@WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV' ) and @footlength<999 and (@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID') and @WT_LEGSSHAPE<>3	@WT_LEGSTYPE@footlength.@legsrealcolor.@							
+Condition	700	700	0	JPN Set RollErgo article to XX JPN		@ROLLERGOCHECK	0	0	0	(@WT_LEGSTYPE<>'ED' and @WT_LEGSTYPE<>'ID')	XX							
+Condition	700	700	0	RolErgo check		@ROLLERGOCHECK	0	0	0	(@WT_SHAPESWT5='HJOH' or @WT_SHAPESWT5='HJOV' )and (@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID')	@WT_LEGSTYPE800VH.@legsrealcolor.@WT_LEG							
+Condition	690	690	0	rol LEGS real color		@legsrealcolor	0	0	0	@WT_LEGSCOLOR=4	10							
+Condition	690	690	0	rol LEGS real color		@legsrealcolor	0	0	0	@WT_LEGSCOLOR=5	30							
+Condition	690	690	0	rol LEGS real color		@legsrealcolor	0	0	0	@WT_LEGSCOLOR=6	20							
+Condition	690	690	0	rol LEGS real color		@legsrealcolor	0	0	0	@WT_LEGSCOLOR=7	40							
+Condition	660	660	0	LEGS foot length		@footlength	0	0	0	@WT_WIDTH>999 and @WT_LEGSFEET<>2	1000							
+Condition	660	660	0	LEGS foot length		@footlength	0	0	0	@WT_WIDTH>799 and @WT_WIDTH<1000 and @WT_LEGSFEET<>2	800							
+Condition	660	660	0	LEGS foot length		@footlength	0	0	0	@WT_WIDTH>499 and @WT_WIDTH<800 and @WT_LEGSFEET<>2	500							
+Condition	800	800	0	REAL COLOR CUTOUT (METAL)		@REALCOLORCUTOUTL	0	0	0	@ST_CUTOUTCABLECOLOL='A6'	6							
+Condition	800	800	0	REAL COLOR CUTOUT (METAL)		@REALCOLORCUTOUTL	0	0	0	@ST_CUTOUTCABLECOLOL='A5'	5							
+Condition	800	800	0	REAL COLOR CUTOUT (METAL)		@REALCOLORCUTOUTL	0	0	0	@ST_CUTOUTCABLECOLOL='A4'	4							
+Condition	805	805	0	REAL COLOR CUTOUT (METAL)		@REALCOLORCUTOUTC	0	0	0	@ST_CUTOUTCABLECOLOC='A6'	6							
+Condition	805	805	0	REAL COLOR CUTOUT (METAL)		@REALCOLORCUTOUTC	0	0	0	@ST_CUTOUTCABLECOLOC='A5'	5							
+Condition	805	805	0	REAL COLOR CUTOUT (METAL)		@REALCOLORCUTOUTC	0	0	0	@ST_CUTOUTCABLECOLOC='A4'	4							
+Condition	810	810	0	REAL COLOR CUTOUT (METAL)		@REALCOLORCUTOUTR	0	0	0	@ST_CUTOUTCABLECOLOR='A6'	6							
+Condition	810	810	0	REAL COLOR CUTOUT (METAL)		@REALCOLORCUTOUTR	0	0	0	@ST_CUTOUTCABLECOLOR='A5'	5							
+Condition	810	810	0	REAL COLOR CUTOUT (METAL)		@REALCOLORCUTOUTR	0	0	0	@ST_CUTOUTCABLECOLOR='A4'	4							
+Condition	1 000	1 000	0	Leg Article Finder (ASTRO) 65		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='AS' and @WT_LEGSHEIGTH='B' and (@WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV')	20							
+Condition	1 000	1 000	0	Leg Article Finder (ASTRO) 50		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='AS' and @WT_LEGSHEIGTH='A' and (@WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV')	31							
+Condition	1 000	1 000	0	Leg Article Finder (ASTRO) 65 zigzag L		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='AS' and @WT_LEGSHEIGTH='B' and (@WT_SHAPESWT5='HJOV')	60							
+Condition	1 000	1 000	0	Leg Article Finder (ASTRO) 65 zigzag R		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='AS' and @WT_LEGSHEIGTH='B' and (@WT_SHAPESWT5='HJOH')	50							
+Condition	1 000	1 000	0	Leg Article Finder (ASTRO) 50 zigzag L		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='AS' and @WT_LEGSHEIGTH='A' and (@WT_SHAPESWT5='HJOV')	63							
+Condition	1 000	1 000	0	Leg Article Finder (ASTRO) 50 zigzag R		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='AS' and @WT_LEGSHEIGTH='A' and (@WT_SHAPESWT5='HJOH')	83							
+Condition	1 000	1 000	0	Leg Article Finder (EXPLORER) 65		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='EX' and @WT_LEGSHEIGTH='B' and (@WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV')	22							
+Condition	1 000	1 000	0	Leg Article Finder (EXPLORER) 50		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='EX' and @WT_LEGSHEIGTH='A' and (@WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV')	21							
+Condition	1 000	1 000	0	Leg Article Finder (EXPLORE) 65 zigzag L		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='EX' and @WT_LEGSHEIGTH='B' and (@WT_SHAPESWT5='HJOV')	62							
+Condition	1 000	1 000	0	Leg Article Finder (EXPLORE) 65 zigzag R		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='EX' and @WT_LEGSHEIGTH='B' and (@WT_SHAPESWT5='HJOH')	82							
+Condition	1 000	1 000	0	Leg Article Finder (EXPLORE) 50 zigzag L		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='EX' and @WT_LEGSHEIGTH='A' and (@WT_SHAPESWT5='HJOV')	61							
+Condition	1 000	1 000	0	Leg Article Finder (EXPLORE) 50 zigzag R		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='EX' and @WT_LEGSHEIGTH='A' and (@WT_SHAPESWT5='HJOH')	81							
+Condition	1 000	1 000	0	Leg Article Finder (MANUAL) 20 Round		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='MA' and @WT_LEGSSHAPE='2' and @WT_LEGSHEIGTH='G' and (@WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV')	26							
+Condition	1 000	1 000	0	Leg Article Finder (MANUAL) 20 Squeare		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='MA' and @WT_LEGSSHAPE='1' and @WT_LEGSHEIGTH='G' and (@WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV')	46							
+Condition	1 000	1 000	0	Leg Article Finder (MANUAL) 20 zigzag RL		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='MA' and @WT_LEGSSHAPE='2' and @WT_LEGSHEIGTH='G' and (@WT_SHAPESWT5='HJOV')	66							
+Condition	1 000	1 000	0	Leg Article Finder (MANUAL) 20 zigzag SL		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='MA' and @WT_LEGSSHAPE='1' and @WT_LEGSHEIGTH='G' and (@WT_SHAPESWT5='HJOV')	76							
+Condition	1 000	1 000	0	Leg Article Finder (MANUAL) 20 zigzag RR		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='MA' and @WT_LEGSSHAPE='2' and @WT_LEGSHEIGTH='G' and (@WT_SHAPESWT5='HJOH')	86							
+Condition	1 000	1 000	0	Leg Article Finder (MANUAL) 20 zigzag SR		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='MA' and @WT_LEGSSHAPE='1' and @WT_LEGSHEIGTH='G' and (@WT_SHAPESWT5='HJOH')	96							
+Condition	1 000	1 000	0	Leg Article Finder (Fixed) Round		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='FX' and @WT_LEGSSHAPE='2' and (@WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV')	25							
+Condition	1 000	1 000	0	Leg Article Finder (Fixed) Squeare		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='FX' and @WT_LEGSSHAPE='1' and (@WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV')	45							
+Condition	1 000	1 000	0	Leg Article Finder (FIXED) zigzag RL		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='FX' and @WT_LEGSSHAPE='2' and (@WT_SHAPESWT5='HJOV')	65							
+Condition	1 000	1 000	0	Leg Article Finder (FIXED)  zigzag SL		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='FX' and @WT_LEGSSHAPE='1' and (@WT_SHAPESWT5='HJOV')	75							
+Condition	1 000	1 000	0	Leg Article Finder (FIXED) zigzag RR		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='FX' and @WT_LEGSSHAPE='2' and (@WT_SHAPESWT5='HJOH')	85							
+Condition	1 000	1 000	0	Leg Article Finder (FIXED)  zigzag SR		@REALSWT6LEGS	0	0	0	@WT_LEGSTYPE='FX' and @WT_LEGSSHAPE='1' and (@WT_SHAPESWT5='HJOH')	95							
+Condition	1 010	1 010	0	Leg Article Finder (FIXED)  zigzag SR		@REALSWT6LEGSFINDER	0	0	0	@WT_LEGSTYPE<>'WO'	78@REALSWT6LEGS@WT_LEGSCOLORSWT1							
+Condition	695	695	0	rol LEGS shape		@reallegshape	0	0	0	@WT_LEGSSHAPE=1	1							
+Condition	695	695	0	rol LEGS shape		@reallegshape	0	0	0	@WT_LEGSSHAPE=2	2							
+Condition	695	695	0	rol LEGS shape		@reallegshape	0	0	0	@WT_LEGSSHAPE=3	1							
+Condition	1 050	1 050	0	ROLL ERGO STB FINDER		@rollergostb	0	0	0	(@WT_LENGTH<1200 and @footlength<1000 and (@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID'))	STB							
+Condition	1 050	1 050	0	ROLL ERGO STB FINDER		@rollergostb	0	0	0	(@WT_LENGTH>1199 and @footlength>999 and (@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID'))	XXX							
+Condition	1 050	1 050	0	ROLL ERGO STB FINDER		@rollergostb	0	0	0	(@WT_LENGTH>1199 and @footlength<1000 and (@WT_LEGSTYPE='ED' or @WT_LEGSTYPE='ID'))	XXX							
+Condition	331	331	0	 feet type		@WT_LEGSFEET_ML	0	0	0	@WT_SHAPESWT6<>'HJOH' and @WT_SHAPESWT6<>'HJOV'	WT_LEGSFEETX							
+Condition	336	336	0	 feet type		@WT_LEGSFEET_MR	0	0	0	@WT_SHAPESWT6<>'HJOH' and @WT_SHAPESWT6<>'HJOV'	WT_LEGSFEETX							
+Condition	0	550	0	Choose pre mounted service	1	@WT_MOUNTING_LEGS	0	18	18	1=1	2						Leg	@WT_LEGSTYPE<>'WO'
+Condition	8 000	8 000	0	tabletop model		@MODELTABLE	0	0	0	1=1	SWT6							
+Condition	901	901	0	Set Cable hole price		@AddPrisCableHole1	0	0	0	(@WT_WIRELESS<>'X'  and @ST_CUTOUTL<>'9' )	1							
+Condition	902	902	0	Set Cable hole price		@AddPrisCableHole2	0	0	0	(@WT_WIRELESS<>'X'  and @ST_CUTOUTC<>'9' )	1							
+Condition	903	903	0	Set Cable hole price		@AddPrisCableHole3	0	0	0	(@WT_WIRELESS<>'X'  and @ST_CUTOUTR<>'9' )	1							
+Condition	901	901	0	Set Cable hole price		@AddPrisCableHole1	0	0	0	(@WT_WIRELESS<>'X'  and @ST_CUTOUTL='9' )	0							
+Condition	902	902	0	Set Cable hole price		@AddPrisCableHole2	0	0	0	(@WT_WIRELESS<>'X'  and @ST_CUTOUTC='9' )	0							
+Condition	903	903	0	Set Cable hole price		@AddPrisCableHole3	0	0	0	(@WT_WIRELESS<>'X'  and @ST_CUTOUTR='9' )	0							
+Condition	901	901	0	Set Cable hole price		@AddPrisCableHole1	0	0	0	(@WT_WIRELESS='X'  and @ST_CUTOUTL<>'9' )	1							
+Condition	901	901	0	Set Cable hole price		@AddPrisCableHole1	0	0	0	(@WT_WIRELESS='X'  and @ST_CUTOUTL='9' )	0							
+Condition	902	902	0	Set Cable hole price		@AddPrisCableHole2	0	0	0	(@WT_WIRELESS='X'  and @ST_CUTOUTC<>'9' )	1							
+Condition	902	902	0	Set Cable hole price		@AddPrisCableHole2	0	0	0	(@WT_WIRELESS='X'  and @ST_CUTOUTC='9' )	0							
+Condition	903	903	0	Set Cable hole price		@AddPrisCableHole3	0	0	0	(@WT_WIRELESS='X'  and @ST_CUTOUTR<>'9' )	1							
+Condition	903	903	0	Set Cable hole price		@AddPrisCableHole3	0	0	0	(@WT_WIRELESS='X'  and @ST_CUTOUTR='9' )	0							
+Condition	905	905	0	Set Cable hole price		@AddPrisCableHole	0	0	0	@AddPrisCableHole1=1 and @AddPrisCableHole2=1 and @AddPrisCableHole3=1	1							
+Condition	905	905	0	Set Cable hole price		@AddPrisCableHole	0	0	0	@AddPrisCableHole1=1 and @AddPrisCableHole2=1 and @AddPrisCableHole3=0	1							
+Condition	905	905	0	Set Cable hole price		@AddPrisCableHole	0	0	0	@AddPrisCableHole1=1 and @AddPrisCableHole2=0 and @AddPrisCableHole3=1	1							
+Condition	905	905	0	Set Cable hole price		@AddPrisCableHole	0	0	0	@AddPrisCableHole1=0 and @AddPrisCableHole2=1 and @AddPrisCableHole3=1	1							
+Condition	905	905	0	Set Cable hole price		@AddPrisCableHole	0	0	0	@AddPrisCableHole1=1 and @AddPrisCableHole2=0 and @AddPrisCableHole3=0	1							
+Condition	905	905	0	Set Cable hole price		@AddPrisCableHole	0	0	0	@AddPrisCableHole1=0 and @AddPrisCableHole2=0 and @AddPrisCableHole3=1	1							
+Condition	905	905	0	Set Cable hole price		@AddPrisCableHole	0	0	0	@AddPrisCableHole1=0 and @AddPrisCableHole2=1 and @AddPrisCableHole3=0	1							
+Condition	905	905	0	Set Cable hole price		@AddPrisCableHole	0	0	0	@AddPrisCableHole1=0 and @AddPrisCableHole2=0 and @AddPrisCableHole3=0	0							
+Condition	2 000	2 000	0	NEW Legs builder		@NEWSWT6LEGSFINDER	0	0	0	@WT_LEGSTYPE<>'WO'	78@TYPESWT62@COLORSWT6@HEIGHTSWT6@SHAPES							
+Condition	1 500	1 500	0	leg builder		@TYPESWT6	0	0	0	@WT_LEGSTYPE='AS'	A							
+Condition	1 500	1 500	0	leg builder		@TYPESWT6	0	0	0	@WT_LEGSTYPE='EX'	E							
+Condition	1 500	1 500	0	leg builder		@TYPESWT6	0	0	0	@WT_LEGSTYPE='FX'	F							
+Condition	1 500	1 500	0	leg builder		@TYPESWT6	0	0	0	@WT_LEGSTYPE='MA'	M							
+Condition	1 505	1 505	0	leg builder		@COLORSWT6	0	0	0	@WT_LEGSCOLOR<>7	COL							
+Condition	1 505	1 505	0	leg builder		@COLORSWT6	0	0	0	@WT_LEGSCOLOR=7	CRO							
+Condition	1 510	1 510	0	leg builder		@HEIGHTSWT6	0	0	0	@WT_LEGSHEIGTH='B' and (@WT_LEGSTYPE='AS' or @WT_LEGSTYPE='EX')	650							
+Condition	1 510	1 510	0	leg builder		@HEIGHTSWT6	0	0	0	@WT_LEGSHEIGTH='A' and (@WT_LEGSTYPE='AS' or @WT_LEGSTYPE='EX')	500							
+Condition	1 510	1 510	0	leg builder		@HEIGHTSWT6	0	0	0	@WT_LEGSHEIGTH<>'' and @WT_LEGSTYPE='FX'	FAS							
+Condition	1 510	1 510	0	leg builder		@HEIGHTSWT6	0	0	0	@WT_LEGSHEIGTH<>'' and @WT_LEGSTYPE='MA'	MAN							
+Condition	1 515	1 515	0	leg builder		@SHAPESWT6	0	0	0	@WT_SHAPESWT5='HJOV' or @WT_SHAPESWT5='HJOH'	ZIG							
+Condition	1 515	1 515	0	leg builder		@SHAPESWT6	0	0	0	@WT_SHAPESWT5<>'HJOH' or @WT_SHAPESWT5<>'HJOV'	FIX							
+Condition	11	11	0	Width		@WIDTH	0	0	0	@WT_LENGTH='1000' and (@WT_SHAPESWT6='CORL' or @WT_SHAPESWT6='CORR')	WT_WIDTH6CORN1							
+Condition	80	80	0	Find end number		@EXITA	0	0	0	@WT_LENGTH<>'' and @WT_WIDTH<>'' and @WT_EXITA='010' and @WT_SHAPESWT6<>'HJOH' and @WT_SHAPESWT6<>'HJOV'	10							
+Condition	50	50	0	Table model		@TABLENUMBER	0	0	0	@WT_SHAPESWT6='HJOH'	A							
+Condition	50	50	0	Table model		@TABLENUMBER	0	0	0	@WT_SHAPESWT6='HJOV'	B							
+Condition	50	50	0	Table model		@TABLENUMBER	0	0	0	@WT_LENGTH='1000' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORR'	C							
+Condition	50	50	0	Table model		@TABLENUMBER	0	0	0	@WT_LENGTH='1000' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORL'	D							
+Condition	50	50	0	Table model		@TABLENUMBER	0	0	0	@WT_LENGTH='1200' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORL'	E							
+Condition	50	50	0	Table model		@TABLENUMBER	0	0	0	@WT_LENGTH='1200' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORR'	E							
+Condition	55	55	0	Core number		@TABLESHAPE	0	105	105	1=1	@TABLENUMBER							
+Condition	59	59	0	exit a find		@EXITA_FIND	0	0	0	(@WT_SHAPESWT6='HJOH' or @WT_SHAPESWT6='HJOV')	WT_EXITA3							
+Condition	59	59	0	exit a find		@EXITA_FIND	0	0	0	@WT_LENGTH='1000' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORR'	WT_EXITA1							
+Condition	59	59	0	exit a find		@EXITA_FIND	0	0	0	@WT_LENGTH='1000' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORL'	WT_EXITA1							
+Condition	59	59	0	exit a find		@EXITA_FIND	0	0	0	@WT_LENGTH='1200' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORR'	WT_EXITA2							
+Condition	59	59	0	exit a find		@EXITA_FIND	0	0	0	@WT_LENGTH='1200' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORL'	WT_EXITA2							
+Condition	64	64	0	exit a find		@EXITB_FIND	0	0	0	@WT_LENGTH='1200' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORR'	WT_EXITA2							
+Condition	64	64	0	exit a find		@EXITB_FIND	0	0	0	@WT_LENGTH='1200' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORL'	WT_EXITA2							
+Condition	64	64	0	exit a find		@EXITB_FIND	0	0	0	@WT_LENGTH='1000' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORR'	WT_EXITB1							
+Condition	64	64	0	exit a find		@EXITB_FIND	0	0	0	@WT_LENGTH='1000' and @WT_WIDTH='1200' and @WT_SHAPESWT6='CORL'	WT_EXITB1							
+Condition	64	64	0	exit a find		@EXITB_FIND	0	0	0	@WT_SHAPESWT6='HJOH' or @WT_SHAPESWT6='HJOV'	WT_EXITB1							
+Condition	80	80	0	Find end number		@EXITA	0	0	0	@WT_LENGTH<>'' and @WT_WIDTH<>'' and @WT_EXITA='020' and @WT_SHAPESWT6<>'HJOH' and @WT_SHAPESWT6<>'HJOV'	20							
+Condition	80	80	0	Find end number		@EXITA	0	0	0	@WT_LENGTH<>'' and @WT_WIDTH<>'' and @WT_EXITA='030' and @WT_SHAPESWT6<>'HJOH' and @WT_SHAPESWT6<>'HJOV'	30							
+Condition	80	80	0	Find end number		@EXITA	0	0	0	@WT_LENGTH<>'' and @WT_WIDTH<>'' and @WT_EXITA='040' and @WT_SHAPESWT6<>'HJOH' and @WT_SHAPESWT6<>'HJOV'	40							
+Condition	80	80	0	Find end number		@EXITA	0	0	0	@WT_LENGTH<>'' and @WT_WIDTH<>'' and @WT_EXITA='050' and @WT_SHAPESWT6<>'HJOH' and @WT_SHAPESWT6<>'HJOV'	50							
+Condition	11	11	0	Width		@WIDTH	0	0	0	@WT_LENGTH='1200' and (@WT_SHAPESWT6='CORL' or @WT_SHAPESWT6='CORR')	WT_WIDTH6CORN1							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='010'	10							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='020'	20							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='030'	30							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='040'	40							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='050'	50							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='065'	65							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='075'	75							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='085'	85							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='095'	95							
+Condition	89	89	0	Find end number		@EXITB	0	0	0	@WT_EXITB='105'	105							
+Condition	305	305	0	Find end number		@WT_LEGSSHAPE_M	0	0	0	@WT_LEGSTYPE='AS'	WT_LEGSASTRO							
+Condition	305	305	0	Find end number		@WT_LEGSSHAPE_M	0	0	0	@WT_LENGTH>1199 and (@WT_LEGSTYPE='ID')	WT_LEGSROLER							
+Condition	305	305	0	Find end number		@WT_LEGSSHAPE_M	0	0	0	@WT_LEGSTYPE='FX' or @WT_LEGSTYPE='MA'	WT_LEGSMANUAL							
+Condition	305	305	0	Find end number		@WT_LEGSSHAPE_M	0	0	0	@WT_LEGSTYPE='WO'	WT_LEGSWITHOUT							
+Condition	305	305	0	Find end number		@WT_LEGSSHAPE_M	0	0	0	@WT_LENGTH<1200 and (@WT_LEGSTYPE='ID')	WT_LEGSROLER1							
+Condition	305	305	0	Find end number		@WT_LEGSSHAPE_M	0	0	0	@WT_LENGTH<1200 and (@WT_LEGSTYPE='ED')	WT_LEGSROLER1UP							
+Condition	305	305	0	Find end number		@WT_LEGSSHAPE_M	0	0	0	@WT_LENGTH>1199 and (@WT_LEGSTYPE='ED')	WT_LEGSROLERUP							
+Condition	305	305	0	Find end number		@WT_LEGSSHAPE_M	0	0	0	@WT_LEGSTYPE='ZO'	WT_LEGSIBEIN							
+Condition	365	365	0	 leg system sound level		@WT_LEGSHEIGTH_M	0	0	0	@WT_LEGSTYPE='ZO'	WT_LEGSHZOOM							
+Condition	205	205	0	ST_EDGECABLE1		@ST_EDGECUTOUT_TYPE	0	0	0	@WT_EDGEWIRELESS='X'	ST_EDGECABLE1							
+Condition	205	205	0	ST_EDGECABLE1		@ST_EDGECUTOUT_TYPE	0	0	0	@WT_EDGEWIRELESS<>'7' and @WT_EDGEWIRELESS<>'8' and @WT_EDGEWIRELESS<>'9'	ST_EDGECABLE2							
+Condition	205	205	0	ST_EDGECABLE1		@ST_EDGECUTOUT_TYPE	0	0	0	@WT_EDGEWIRELESS<>'4' and @WT_EDGEWIRELESS<>'5' and @WT_EDGEWIRELESS<>'6'	ST_EDGECABLE3							
+Condition	207	207	0	Control cutout		@ST_EDGECUTOUT_C	0	0	0	(@ST_EDGECUTOUTTYPE='C1' or @ST_EDGECUTOUTTYPE='C2' or @ST_EDGECUTOUTTYPE='C3' or @ST_EDGECUTOUTTYPE='XX')	ST_CUTOUTCSWT5							
+Condition	207	207	0	Control cutout		@ST_EDGECUTOUT_C	0	0	0	(@ST_EDGECUTOUTTYPE='C4' or @ST_EDGECUTOUTTYPE='C5' or @ST_EDGECUTOUTTYPE='C6' or @ST_EDGECUTOUTTYPE='C7' or @ST_EDGECUTOUTTYPE='XX')	ST_CUTOUTCSWT5							
+Condition	233	233	0	 cable hole accessory Left		@ST_EDGECABACCES_L	0	0	0	@ST_EDGECUTOUTL=5	WT_PWR50							
+Condition	233	233	0	 cable hole accessory Left		@ST_EDGECABACCES_L	0	0	0	@ST_EDGECUTOUTL=6	WT_PWR60							
+Condition	223	233	0	 cable hole accessory Left		@ST_EDGECABACCES_L	0	0	0	@ST_EDGECUTOUTL=8	WT_PWR80							
+Condition	233	233	0	 cable hole accessory Left		@ST_EDGECABACCES_L	0	0	0	@ST_EDGECUTOUTL=4	WT_PWRXX							
+Condition	233	233	0	 cable hole accessory Left		@ST_EDGECABACCES_L	0	0	0	@ST_EDGECUTOUTL=9	WT_PWRWITHOUT							
+Condition	213	213	0	 cable hole accessory Center		@ST_EDGECABACCES_C	0	0	0	@ST_EDGECUTOUTC=5	WT_PWR50_C							
+Condition	213	213	0	 cable hole accessory Center		@ST_EDGECABACCES_C	0	0	0	@ST_EDGECUTOUTC=6	WT_PWR60_C							
+Condition	213	213	0	 cable hole accessory Center		@ST_EDGECABACCES_C	0	0	0	@ST_EDGECUTOUTC=8	WT_PWR80_C							
+Condition	213	213	0	 cable hole accessory Center		@ST_EDGECABACCES_C	0	0	0	@ST_EDGECUTOUTC=4	WT_PWRXX_C							
+Condition	213	213	0	 cable hole accessory Center		@ST_EDGECABACCES_C	0	0	0	@ST_EDGECUTOUTC=9	WT_PWRWITHOUT							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1199 and @REALEXITWIDTH_R<1600 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))	WT_VESTACARALL12							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1599 and @REALEXITWIDTH_R<1800 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))	WT_VESTACARALL16							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1799 and @REALEXITWIDTH_R<2000 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))	WT_VESTACARALL18							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1999  and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A3' or @WT_VestaTextile='XX'))	WT_VESTACARALL20							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1199 and @REALEXITWIDTH_R<1600 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))	WT_VESTAEVENTLL12							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1599 and @REALEXITWIDTH_R<1800 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))	WT_VESTAEVENTLL16							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1799 and @REALEXITWIDTH_R<2000 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))	WT_VESTAEVENTLL18							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1999 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='A2' or @WT_VestaTextile='XX'))	WT_VESTAEVENTLL20							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1199 and @REALEXITWIDTH_R<1600 and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))	WT_VESTAVELITOL12							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1599 and @REALEXITWIDTH_R<1800 and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))	WT_VESTAVELITOL16							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1799 and @REALEXITWIDTH_R<2000 and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))	WT_VESTAVELITOL18							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1999 and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='A1' or @WT_VestaTextile='XX'))	WT_VESTAVELITOL20							
+Control	0	9 000	0	Refresh bilde			9	0	0									
+Condition	9	9	0	Lenght		@LENGTH	0	0	0	@WT_SHAPESWT6='CORL' or @WT_SHAPESWT6='CORR'	WT_LENGTHCORNLR							
+Condition	85	85	0	END number		@TELLUSENDNUM	0	101	99	1=1	@EXITA							
+Condition	80	80	0	Find end number corner right		@EXITA	0	0	0	@WT_LENGTH='2000' and @WT_WIDTH='1200' and @WT_SHAPESWT6='HJOH'	240							
+Condition	90	90	0	END number		@TELLUSENDNUMB	0	98	96	1=1	@EXITB							
+Condition	233	233	0	 cable hole accessory Left		@ST_EDGECABACCES_L	0	0	0	@ST_EDGECUTOUTL=1	WT_PWR30							
+Condition	213	213	0	 cable hole accessory Center		@ST_EDGECABACCES_C	0	0	0	@ST_EDGECUTOUTC=1	WT_PWR30_C							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>799 and @WT_SHAPESWT6='STAR') and (@WT_VestaTextile='H1' or @WT_VestaTextile='XX')	WT_VESTAKVADOFF_08							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>799 and @RealExitLenght_R<1000) and @WT_VestaTextile='H1' or @WT_VestaTextile='XX'	WT_VestaKVADOF_08							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>999 and @RealExitLenght_R<1200) and @WT_VestaTextile='H1' or @WT_VestaTextile='XX'	WT_VestaKVADOF_10							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1199 and @RealExitLenght_R<1400) and @WT_VestaTextile='H1' or @WT_VestaTextile='XX'	WT_VestaKVADOF_12							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1399 and @RealExitLenght_R<1600) and @WT_VestaTextile='H1' or @WT_VestaTextile='XX'	WT_VestaKVADOF_14							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1599 and @RealExitLenght_R<1800) and @WT_VestaTextile='H1' or @WT_VestaTextile='XX'	WT_VestaKVADOF_16							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	(@RealExitLenght_R>1799 and @RealExitLenght_R<2000) and @WT_VestaTextile='H1' or @WT_VestaTextile='XX'	WT_VestaKVADOF_18							
+Condition	435	435	0	Front Vesta screen		@WT_VESTAVELITOF_M	0	0	0	@RealExitLenght_R>1999 and @WT_VestaTextile='H1' or @WT_VestaTextile='XX'	WT_VestaKVADOF_20							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>799) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='H1' or @WT_VestaTextile='XX')) and @WT_SHAPESWT6='STAR'	WT_VestaKVADLL_08							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>799 and @WT_WIDTH<1000) and (@WT_VESTAVELITOF<>'' and (@WT_VestaTextile='H1' or @WT_VestaTextile='XX'))	WT_VestaKVADLL_08							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	(@REALEXITWIDTH_R>999 and @WT_WIDTH<1200) and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='H1' or @WT_VestaTextile='XX'))	WT_VestaKVADLL_10							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1199 and @REALEXITWIDTH_R<1600 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='H1' or @WT_VestaTextile='XX'))	WT_VestaKVADLL_12							
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='010'	800		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='065'	600		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='020'	1000		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='030'	1200		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='040'	1400		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='050'	1600		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='075'	800		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='085'	1000		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='095'	1200		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='105'	1400		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='010'	800		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='020'	1000		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='030'	1200		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='040'	1400		X    000000000000000			Ordrelinje:Notat		
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='050'	1600		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='065'	600		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='075'	800		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='085'	1000		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='095'	1200		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='105'	1400		X    000000000000000			Ordrelinje:Notat		
+Calculation	62	62	0	@RealExitLenght		@RealExitLenght_M	1	0	0	1=1	@RealExitLenght+@WT_LENGTH		X    000000000000000					
+Calculation	63	63	0	@RealExitLenght		@RealExitLenght_R	1	0	0	1=1	@RealExitLenght_M		X    000000000000000			Ordrelinje:Notat		
+Calculation	70	70	0	@RealExitWidth		@RealExitWidth_M	1	0	0	1=1	@RealExitWidth+@WT_WIDTH		X    000000000000000					
+Calculation	71	71	0	@RealExitWidth		@RealExitWidth_R	1	0	0	1=1	@RealExitWidth_M		X    000000000000000			Ordrelinje:Notat		
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1599 and @REALEXITWIDTH_R<1800 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='H1' or @WT_VestaTextile='XX'))	WT_VestaKVADLL_16							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1799 and @REALEXITWIDTH_R<2000 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='H1' or @WT_VestaTextile='XX'))	WT_VestaKVADLL_18							
+Condition	445	445	0	Left Vesta screen		@WT_VESTAVELITOL_M	0	0	0	@REALEXITWIDTH_R>1999 and (@WT_VESTAVELITOF='XX' and (@WT_VestaTextile='H1' or @WT_VestaTextile='XX'))	WT_VestaKVADLL_20							
+Condition	69	69	0	@RealExitWidth		@RealExitWidth	0	0	0	@WT_EXITB='999'	0		X    000000000000000			Ordrelinje:Notat		
+Condition	61	61	0	@RealExitLenght		@RealExitLenght	0	0	0	@WT_EXITA='999'	0		X    000000000000000			Ordrelinje:Notat		
+Control	0	1	1	Shape		@WT_SHAPESWT6	33	250	247		listvarianter(WT_SHAPESWT6)				Ordrelinje:Varebeskrivelse	Ordrelinje:Notat		
+Control	10	10	5	Choose Length		@WT_LENGTH	33	246	243		listvarianter(@LENGTH)		X    000000000000000		Ordrelinje:Varebeskrivelse	Ordrelinje:Notat		
+Control	20	20	10	Choose Width		@WT_WIDTH	33	242	239		listvarianter(@WIDTH)		X    000000000000000		Ordrelinje:Varebeskrivelse	Ordrelinje:Notat		
+Control	60	60	11	Choose Exit A		@WT_EXITA	33	149	147		listvarianter(@EXITA_FIND)		X    000000000000000		Ordrelinje:Varebeskrivelse	Ordrelinje:Notat		
+Control	65	65	12	Choose Exit B		@WT_EXITB	33	146	144		listvarianter(@EXITB_FIND)		X    000000000000000		Ordrelinje:Varebeskrivelse	Ordrelinje:Notat		
+Control	0	75	25	Choose Surface decor		@ST_SWT6SURFACE	33	103	102		listvarianter(ST_SWT5SURFACE)		X    000000000000000		Ordrelinje:Varebeskrivelse	Ordrelinje:Notat		
+Control	0	300	150	Choose leg system type	1	@WT_LEGSTYPE	33	52	51		Listvarianter(@SWT6LEGSTYPE)				Ordrelinje:Varebeskrivelse	Ordrelinje:Notat		
+Control	0	320	155	Choose leg system color		@WT_LEGSCOLOR	33	50	50		Listvarianter(@WT_LEGSCOLOR_M)				Ordrelinje:Varebeskrivelse	Ordrelinje:Notat		@WT_LEGSTYPE<>'WO'
+Control	0	370	156	Choose legs heigth		@WT_LEGSHEIGTH	33	44	44		Listvarianter(@WT_LEGSHEIGTH_M)				Ordrelinje:Notat		Leg	
+Control	0	310	160	Choose columns shape		@WT_LEGSSHAPE	33	49	49		Listvarianter(@WT_LEGSSHAPE_m)				Ordrelinje:Notat		Leg	@WT_LEGSTYPE<>'WO'
+Control	0	330	165	Choose feet type		@WT_LEGSFEET	33	48	48		Listvarianter(@WT_LEGSFEET_M)				Ordrelinje:Notat		Leg	@WT_LEGSTYPE<>'WO' and @WT_SHAPESWT5<>'HJOH' and @WT_SHAPESWT5<>'HJOV'
+Control	0	335	165	Choose feet type left		@WT_LEGSFEETL	33	0	0		Listvarianter(@WT_LEGSFEET_ML)				Ordrelinje:Notat		Leg	@WT_LEGSTYPE<>'WO' and (@WT_SHAPESWT5='HJOH' or @WT_SHAPESWT5='HJOV')
+Control	0	340	165	Choose feet type right		@WT_LEGSFEETR	33	0	0		Listvarianter(@WT_LEGSFEET_MR)				Ordrelinje:Notat		Leg	@WT_LEGSTYPE<>'WO' and (@WT_SHAPESWT5='HJOH' or @WT_SHAPESWT5='HJOV')
+Control	0	350	170	Choose beam type		@WT_LEGSBEAM	33	46	46		Listvarianter(@WT_LEGSBEAM_M)				Ordrelinje:Notat		Leg	@WT_LEGSTYPE<>'WO'
+Control	0	360	180	Choose sound level		@WT_LEGSSILENTROL	33	45	45		Listvarianter(@WT_LEGSSILENTROL_M)				Ordrelinje:Notat		Leg	@WT_LEGSTYPE<>'WO' and  @WT_LEGSTYPE<>'FX' and @WT_LEGSTYPE<>'MA'
+Control	0	400	200	Choose cable tray type	1	@ST_CABLECANAL	33	34	34		Listvarianter(@ST_MMCABLECANAL)				Ordrelinje:Notat		Cutouts	
+Control	0	405	201	Choose cable tray colour		@ST_CABLETRAYCOLOR	33	20	20		Listvarianter(@ST_CABLETRAYCOLOR_M)				Ordrelinje:Notat		Cutouts	@ST_CABLECANAL<>'X'
+Control	0	110	205	Choose cable hole position	1	@ST_CUTOUTTYPE	33	88	87		Listvarianter(@ST_CUTOUT_TYPE)				Ordrelinje:Notat		Cutouts	
+Control	0	206	210	Choose Edge cable hole position	1	@ST_EDGECUTOUTTYPE	33	90	89		Listvarianter(@ST_EDGECUTOUT_TYPE)				Ordrelinje:Notat		Cutouts	
+Control	0	150	211	Choose cable hole type Left	1	@ST_CUTOUTL	33	35	35		Listvarianter(@ST_CUTOUT_C)				Ordrelinje:Notat		Cutouts	(@ST_CUTOUTTYPE='C1' or @ST_CUTOUTTYPE='C4' or @ST_CUTOUTTYPE='C6' or @ST_CUTOUTTYPE='C7')
+Control	0	230	211	Choose cable hole type Edge Left	1	@ST_EDGECUTOUTL	33	93	93		Listvarianter(@ST_EDGECUTOUT_C)				Ordrelinje:Notat		Cutouts	(@ST_EDGECUTOUTTYPE='C1' or @ST_EDGECUTOUTTYPE='C4')
+Control	0	153	212	Choose cable hole/s accessory/s Left		@ST_CABLEACCESSORYL	33	25	24		Listvarianter(@ST_CABLEACCESSORY_L)				Ordrelinje:Notat		Cutouts	@ST_CUTOUTL=8 or @ST_CUTOUTL=6 or @ST_CUTOUTL=5 or @ST_CUTOUTL=1
+Control	0	235	212	Choose cable hole/s accessory/s Left		@ST_ECABLEACCESSORYL	33	117	116		Listvarianter(@ST_EDGECABACCES_L)				Ordrelinje:Notat		Cutouts	@ST_EDGECUTOUTL=8 or @ST_EDGECUTOUTL=6 or @ST_EDGECUTOUTL=5 or @ST_EDGECUTOUTL=1
+Control	0	155	213	Choose left cable hole accessory color		@ST_CUTOUTCABLECOLOL	33	74	73		Listvarianter(@ST_CUTOUTCOLOR_ML)				Ordrelinje:Notat		Cutouts	@ST_CUTOUTL=4 or @ST_CUTOUTL=3 or @ST_CUTOUTL=2
+Control	0	240	213	Choose left cable hole accessory color		@ST_ECUTCABLECOLOL	33	119	118		Listvarianter(@ST_EDGECUTOUTCOLOR_ML)				Ordrelinje:Notat		Cutouts	@ST_EDGECUTOUTL=4 or @ST_EDGECUTOUTL=3 or @ST_EDGECUTOUTL=2
+Control	0	101	214	Choose Wireless Charger	1	@WT_WIRELESS	33	31	31		Listvarianter(WT_WIRELESS)				Ordrelinje:Notat		Cutouts	
+Control	0	201	214	Choose Edge Wireless Charger	1	@WT_EDGEWIRELESS	33	91	91		Listvarianter(WT_EDGEWIRELESS)				Ordrelinje:Notat		Cutouts	
+Control	0	160	215	Choose cable hole type Center	1	@ST_CUTOUTC	33	36	36		Listvarianter(@ST_CUTOUT_C)				Ordrelinje:Notat		Cutouts	(@ST_CUTOUTTYPE='C2' or @ST_CUTOUTTYPE='C4' or @ST_CUTOUTTYPE='C5' or @ST_CUTOUTTYPE='C7')
+Control	0	210	215	Choose cable hole type Edge Center	1	@ST_EDGECUTOUTC	33	92	92		Listvarianter(@ST_EDGECUTOUT_C)				Ordrelinje:Notat		Cutouts	(@ST_EDGECUTOUTTYPE='C2' or @ST_EDGECUTOUTTYPE='C4' )
+Control	0	163	216	Choose cable hole/s accessory/s Center		@ST_CABLEACCESSORYC	33	27	26		Listvarianter(@ST_CABLEACCESSORY_C)				Ordrelinje:Notat		Cutouts	@ST_CUTOUTC=8 or @ST_CUTOUTC=6 or @ST_CUTOUTC=5 or @ST_CUTOUTC=1
+Control	0	215	216	Choose cable hole/s accessory/s Center		@ST_ECABLEACCESSORYC	33	115	114		Listvarianter(@ST_EDGECABACCES_C)				Ordrelinje:Notat		Cutouts	@ST_EDGECUTOUTC=8 or @ST_EDGECUTOUTC=6 or @ST_EDGECUTOUTC=5 or @ST_EDGECUTOUTC=1
+Control	0	165	217	Choose center cable hole accessory color		@ST_CUTOUTCABLECOLOC	33	72	71		Listvarianter(@ST_CUTOUTCOLOR_MC)				Ordrelinje:Notat		Cutouts	@ST_CUTOUTC=4 or @ST_CUTOUTC=3 or @ST_CUTOUTC=2
+Control	0	220	217	Choose center cable hole accessory color		@ST_ECUTCABLECOLOC	33	121	120		Listvarianter(@ST_EDGECUTOUTCOLOR_MC)				Ordrelinje:Notat		Cutouts	@ST_EDGECUTOUTC=4 or @ST_EDGECUTOUTC=3 or @ST_EDGECUTOUTC=2
+Control	0	168	218	Choose cable hole type Right	1	@ST_CUTOUTR	33	37	37		Listvarianter(@ST_CUTOUT_C)				Ordrelinje:Notat		Cutouts	(@ST_CUTOUTTYPE='C3' or @ST_CUTOUTTYPE='C5' or @ST_CUTOUTTYPE='C6' or @ST_CUTOUTTYPE='C7')
+Control	0	170	219	Choose cable hole/s accessory/s Right		@ST_CABLEACCESSORYR	33	29	28		Listvarianter(@ST_CABLEACCESSORY_R)				Ordrelinje:Notat		Cutouts	@ST_CUTOUTR=8 or @ST_CUTOUTR=6 or @ST_CUTOUTR=5 or @ST_CUTOUTR=1
+Control	0	172	220	Choose right cable hole accessory color		@ST_CUTOUTCABLECOLOR	33	86	85		Listvarianter(@ST_CUTOUTCOLOR_MR)				Ordrelinje:Notat		Cutouts	@ST_CUTOUTR=4 or @ST_CUTOUTR=3 or @ST_CUTOUTR=2
+Control	0	420	500	Choose Vesta screen textile	1	@WT_VestaTextile	33	78	77		Listvarianter(WT_VestaTextile)				Ordrelinje:Notat		Vesta screen	
+Control	0	430	501	Choose Vesta screen holders		@WT_VESTABrackets	33	76	75		Listvarianter(@WT_VESTABracketsXX)				Ordrelinje:Notat		Vesta screen	@WT_VestaTextile<>'XX'
+Control	0	434	502	Choose Vesta screen holders colour		@WT_VESTABRACOLOR	33	19	19		Listvarianter(@WT_VESTABRACOLOR_M)				Ordrelinje:Notat		Vesta screen	@WT_VestaTextile<>'XX'
+Control	0	440	510	Front Vesta screen	1	@WT_VESTAVELITOF	33	84	83		Listvarianter(@WT_VESTAVELITOF_M)				Ordrelinje:Notat		Vesta screen	@WT_VestaTextile<>'XX'
+Control	0	450	515	Edge Vesta screen	1	@WT_VESTAVELITOL	33	82	81		Listvarianter(@WT_VESTAVELITOL_M)				Ordrelinje:Notat		Vesta screen	(@WT_VestaTextile<>'XX' and @WT_WIDTH > 0799)
+Control	0	460	520	Right Vesta screen	1	@WT_VESTAVELITOR	33	80	79		Listvarianter(@WT_VESTAVELITOR_M)				Ordrelinje:Notat		Vesta screen	(@WT_VestaTextile<>'XX' and @WT_WIDTH > 0799) and 1=2
