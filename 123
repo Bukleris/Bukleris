@@ -8,7 +8,7 @@ Condition	80	80	0	Find end number corner left		@EXITA	0	0	0	@WT_LENGTH='2000' an
 Condition	80	80	0	Find end number corner left		@EXITA	0	0	0	@WT_LENGTH='1600' and @WT_WIDTH='1200' and @WT_SHAPESWT6='HJOV'	246							
 Condition	80	80	0	Find end number		@EXITA	0	0	0	@WT_LENGTH='1800' and @WT_WIDTH='1200' and @WT_SHAPESWT6='HJOV'	247							
 Condition	9	9	0	Lenght		@LENGTH	0	0	0	@WT_SHAPESWT6='HJOH' or @WT_SHAPESWT6='HJOV'	WT_LENGTHCORN							
-Condition	290	290	0	Find end number		@SWT6LEGSTYPE	0	0	0	1=1	WT_LEGSTYPESWT61							
+Condition	291	290	0	Find end number		@SWT6LEGSTYPE	0	0	0	1=1	WT_LEGSTYPESWT61							
 Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSTYPE='AS'	WT_LEGSCOLORA							
 Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSTYPE='FX' or @WT_LEGSTYPE='EX'	WT_LEGSCOLOR							
 Condition	315	315	0	leg system color		@WT_LEGSCOLOR_M	0	0	0	@WT_LEGSTYPE='MA' and @WT_LEGSSHAPE=1	WT_LEGSCOLORA							
